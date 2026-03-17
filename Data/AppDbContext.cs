@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ConsultorioApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConsultorioApi.Data
 {
@@ -8,9 +9,8 @@ namespace ConsultorioApi.Data
         {
         }
 
-        //public DbSet<Models.Consultorio> Consultorios { get; set; }
-        public DbSet<Models.Paciente> Pacientes { get; set; }
-
-        //public DbSet<Models.Medico> Medicos { get; set; }
+        public DbSet<Consultorio> Consultorios { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Medico> Medicos { get; set; }
     }
 }

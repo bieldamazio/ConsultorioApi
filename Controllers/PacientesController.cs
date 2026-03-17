@@ -23,7 +23,7 @@ namespace ConsultorioApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Paciente>> GetPaciente(string id)
+        public async Task<ActionResult<Paciente>> GetPaciente(int id)
         {
             var paciente = await _context.Pacientes.FindAsync(id);
 
@@ -59,7 +59,7 @@ namespace ConsultorioApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePaciente(string id)
+        public async Task<IActionResult> DeletePaciente(int id)
         {
             var paciente = await _context.Pacientes.FindAsync(id);
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Text.Json.Serialization;
 
 namespace ConsultorioApi.Models
 {
@@ -6,8 +7,8 @@ namespace ConsultorioApi.Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Especialidade { get; set; }
+        public string Crm { get; set; }
         public int ConsultorioId { get; set; }
-        public Consultorio Consultorio { get; set; }
+        public Consultorio? Consultorio { get; set; }
     }
 }
